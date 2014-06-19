@@ -1,0 +1,42 @@
+@meta "utf-8";
+body {
+	width: 1000px;
+	min-height: 650px;
+	margin: auto;
+	font-family: "Liberation sans", Calibri, "Helvetica Neue", helvetica, arial, sans-serif;
+	background-color: hsl(142, 91%, 36%);
+}
+
+h1 {
+	text-align: center;
+}
+
+div {
+	height: 500px;
+	width: 900px;
+	margin: auto;
+	background-color: white:
+}
+.outer {
+	border: 10px solid black;/*PÅVERKAR INRE MARGINAL*/
+}
+
+.inner {
+	background-color: navajowhite; /*GÖR DEN SYLNLIG*/
+	width: 50%;
+	height: 50%;/*använder man min-height här istället expanderar den med innehållet*/
+	margin: 10% auto;
+	/*outline: 10px solid red;*/
+	box-shadow: 0 0 10px 20px navy;
+	padding: 50px; /*lika mycket vaddering på alla håll eftersom det fanns en marginal uppåt 10% ändrades
+	inte denna men alla andra som var auto ändrades*/
+	border: 30px dotted darkgreen;
+}
+/*kant+vaddering+bredd+höjd=border+padding+width+height=boxens totala bredd och höjd*/
+/*ovanstående kan vara svår att beräkna, därför kan nedanstående vara ett alternativ*/
+/*     *=star=används för alla element på hela sidan(dvs universal)*/
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;/*för alla webbläsare utom mozilla Firefox ovanstående rad*/
+}
+/*Vi har nu en box i 50% där bård och vaddering ingår*/
